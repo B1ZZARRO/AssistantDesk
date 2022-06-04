@@ -23,13 +23,15 @@ namespace Assistant
     {
         private RestClient apiClient = ServiceBuilder.GetInstance();
         private RestClient apiClientUser = ServiceBuilderUser.GetInstance();
-        //private MediaPlayer player = new MediaPlayer();
+        //private MediaPlayer player = new MediaPlayer();\
+        private readonly Window _parentWindow;
         private string sResponse;
         private int id;
         
-        public MainWindow(int sId, string sName)
+        public MainWindow(int sId, string sName, Window parent)
         {
             InitializeComponent();
+            _parentWindow = parent;
             lbl_request.Content = "";
             lbl_response.Content = "";
             id = sId;
@@ -52,8 +54,8 @@ namespace Assistant
 
         private void Btn_exit_OnClick(object sender, RoutedEventArgs e)
         {
-            AuthWindow authWindow = new AuthWindow();
-            authWindow.ShowDialog();
+            Hide();
+            _parentWindow.Show();
         }
         
         private void AddNewRequest()
@@ -95,7 +97,7 @@ namespace Assistant
             //else отключить видимость плеера
             //обработка нажатия паузы 
             AddHistory();
-            //UpdateHistory();
+            UpdateHistory();
         }
 
         private void AddHistory()
@@ -114,22 +116,17 @@ namespace Assistant
         private void UpdateHistory()
         {
             var response = apiClientUser.Get<HistoryModel>(new RestRequest("/History/").AddQueryParameter("id", id));
-            List<string> history = new List<string>();	
+            List<History> history = new List<History>();	
             for (int i = 0; i < response?.Body.Count; i++)
             {
-                history.Add(response.Body[i].Query + "\n" + response.Body[i].Response + "\n" + response.Body[i].Date + "\n");
+                history.Add(new History (response.Body[i].Query + "\n" + response.Body[i].Response + "\n" + response.Body[i].Date + "\n"));
             }
-            //Binding binding = BindingOperations.GetSourceUpdatingBindings(history, history);
             listViewProfMinsk.ItemsSource = history;
         }
 
-        private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
+        private void MainWindow_OnClosed(object sender, EventArgs e)
         {
-            /*dg_history.Columns[0].Visibility = Visibility.Collapsed;
-            dg_history.Columns[3].Visibility = Visibility.Collapsed;
-            dg_history.Columns[1].Header = "Запрос";
-            dg_history.Columns[2].Header = "Ответ";
-            dg_history.Columns[4].Header = "Дата";*/
+            Application.Current.Shutdown();
         }
     }
 }

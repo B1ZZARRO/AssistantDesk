@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:Assistant"
         mc:Ignorable="d"
-        Title="RegWindow" Height="450" Width="800">
+        Title="RegWindow" Height="450" Width="800" Closed="RegWindow_OnClosed">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>

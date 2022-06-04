@@ -29,8 +29,8 @@ namespace Assistant
                 }));
             if (response?.Message == "Ok" && tb_name.Text != "")
             {
-                MainWindow mainWindow = new MainWindow(response.Body.UserID, response.Body.Name);
-                mainWindow.ShowDialog();
+                Hide();
+                new MainWindow(response.Body.UserID, response.Body.Name, this).Show();
             }
             else lbl_error.Content = "Неверное имя пользоваателя";
         }
@@ -38,6 +38,11 @@ namespace Assistant
         private void Btn_reg_OnClick(object sender, RoutedEventArgs e)
         {
             Reg();
+        }
+
+        private void RegWindow_OnClosed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

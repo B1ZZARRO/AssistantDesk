@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Assistant"
         mc:Ignorable="d"
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
-        Title="Ассистент" Height="1080" Width="1920" WindowState="Maximized" Loaded="MainWindow_OnLoaded">
+        Title="Ассистент" Height="1080" Width="1920" WindowState="Maximized" Closed="MainWindow_OnClosed">
     
     <Grid>
         <Grid.RowDefinitions>
@@ -73,7 +73,7 @@
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Source=history}" TextWrapping="Wrap"/>
+                    <TextBlock Text="{Binding Path=Text}" TextWrapping="Wrap"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

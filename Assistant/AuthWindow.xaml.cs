@@ -26,9 +26,8 @@ namespace Assistant
                 }));
             if (response?.Message == "Ok")
             {
-                MainWindow mainWindow = new MainWindow(response.Body.UserID, response.Body.Name);
-                //Visibility = Visibility.Hidden;
-                mainWindow.ShowDialog();
+                Hide();
+                new MainWindow(response.Body.UserID, response.Body.Name, this).Show();
             }
             else lbl_error.Content = "Неверный Логин или пароль";
         }
@@ -64,8 +63,7 @@ namespace Assistant
         private void Lbl_enter_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Hide();
-            MainWindow mainWindow = new MainWindow(0, "");
-            mainWindow.ShowDialog();
+            new MainWindow(0, "", this).Show();
         }
     }
 }
