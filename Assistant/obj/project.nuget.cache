@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hx+Xh8JCgHukpjXXIKyy2ooRA0c0YX3URP2bqPAt03Qnfc5HOyywEmn9I79hxVHxMPV5My0RaPt1fFVKfqZOYw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Дмитрий\\RiderProjects\\Assistant\\Assistant\\Assistant.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Дмитрий\\.nuget\\packages\\restsharp\\107.3.1-alpha.0.26\\restsharp.107.3.1-alpha.0.26.nupkg.sha512",
+    "C:\\Users\\Дмитрий\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
