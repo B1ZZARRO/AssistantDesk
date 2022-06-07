@@ -8,6 +8,27 @@
 
     <ItemGroup>
       <PackageReference Include="RestSharp" Version="107.3.1-alpha.0.26" />
+      <PackageReference Include="SharpVectors" Version="1.7.7" />
+      <PackageReference Include="System.Speech" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="icons\baseline_exit_to_app_black_24dp.png" />
+      <Resource Include="icons\baseline_exit_to_app_black_24dp.png" />
+      <None Remove="icons\baseline_mic_black_24dp.png" />
+      <Resource Include="icons\baseline_mic_black_24dp.png" />
+      <None Remove="icons\baseline_send_black_24dp.png" />
+      <Resource Include="icons\baseline_send_black_24dp.png" />
+      <None Remove="icons\baseline_exit_to_app_white_24dp.png" />
+      <Resource Include="icons\baseline_exit_to_app_white_24dp.png" />
+      <None Remove="icons\baseline_mic_white_24dp.png" />
+      <Resource Include="icons\baseline_mic_white_24dp.png" />
+      <None Remove="icons\baseline_send_white_24dp.png" />
+      <Resource Include="icons\baseline_send_white_24dp.png" />
+      <None Remove="icons\baseline_pause_white_24dp.png" />
+      <Resource Include="icons\baseline_pause_white_24dp.png" />
+      <None Remove="icons\baseline_play_arrow_white_24dp.png" />
+      <Resource Include="icons\baseline_play_arrow_white_24dp.png" />
     </ItemGroup>
 
 </Project>

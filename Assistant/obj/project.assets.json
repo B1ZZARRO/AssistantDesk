@@ -2,6 +2,34 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "Microsoft.NETCore.Platforms/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.Win32.Registry/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "RestSharp/107.3.1-alpha.0.26": {
         "type": "package",
         "dependencies": {
@@ -12,6 +40,88 @@
         },
         "runtime": {
           "lib/net5.0/RestSharp.dll": {}
+        }
+      },
+      "SharpVectors/1.7.7": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows/SharpVectors.Converters.Wpf.dll": {},
+          "lib/net5.0-windows/SharpVectors.Core.dll": {},
+          "lib/net5.0-windows/SharpVectors.Css.dll": {},
+          "lib/net5.0-windows/SharpVectors.Dom.dll": {},
+          "lib/net5.0-windows/SharpVectors.Model.dll": {},
+          "lib/net5.0-windows/SharpVectors.Rendering.Gdi.dll": {},
+          "lib/net5.0-windows/SharpVectors.Rendering.Wpf.dll": {},
+          "lib/net5.0-windows/SharpVectors.Runtime.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows/SharpVectors.Converters.Wpf.dll": {},
+          "lib/net5.0-windows/SharpVectors.Core.dll": {},
+          "lib/net5.0-windows/SharpVectors.Css.dll": {},
+          "lib/net5.0-windows/SharpVectors.Dom.dll": {},
+          "lib/net5.0-windows/SharpVectors.Model.dll": {},
+          "lib/net5.0-windows/SharpVectors.Rendering.Gdi.dll": {},
+          "lib/net5.0-windows/SharpVectors.Rendering.Wpf.dll": {},
+          "lib/net5.0-windows/SharpVectors.Runtime.Wpf.dll": {}
+        }
+      },
+      "System.Security.AccessControl/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp3.0/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Speech/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/System.Speech.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Speech.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.1/System.Speech.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "System.Text.Json/5.0.0": {
@@ -26,6 +136,68 @@
     }
   },
   "libraries": {
+    "Microsoft.NETCore.Platforms/5.0.0": {
+      "sha512": "VyPlqzH2wavqquTcYpkIIAQ6WdenuKoFN0BdYBbCWsclXacSOHNQn66Gt4z5NBqEYW0FAPm5rlvki9ZiCij5xQ==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Win32.Registry/5.0.0": {
+      "sha512": "dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg==",
+      "type": "package",
+      "path": "microsoft.win32.registry/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/Microsoft.Win32.Registry.dll",
+        "lib/net461/Microsoft.Win32.Registry.dll",
+        "lib/net461/Microsoft.Win32.Registry.xml",
+        "lib/netstandard1.3/Microsoft.Win32.Registry.dll",
+        "lib/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "lib/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "microsoft.win32.registry.5.0.0.nupkg.sha512",
+        "microsoft.win32.registry.nuspec",
+        "ref/net46/Microsoft.Win32.Registry.dll",
+        "ref/net461/Microsoft.Win32.Registry.dll",
+        "ref/net461/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/Microsoft.Win32.Registry.dll",
+        "ref/netstandard1.3/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/de/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/es/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/fr/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/it/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/ja/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/ko/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/ru/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/zh-hans/Microsoft.Win32.Registry.xml",
+        "ref/netstandard1.3/zh-hant/Microsoft.Win32.Registry.xml",
+        "ref/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "ref/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "runtimes/win/lib/net46/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/net461/Microsoft.Win32.Registry.xml",
+        "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
+        "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "RestSharp/107.3.1-alpha.0.26": {
       "sha512": "ndkUy2YbjYKh4dcipFdLmljlbefX/H/hwSmSDEdKWUZDLh8WXcOW/VJlWGy5C700PTnplk5sg223F+sU0kfpRA==",
       "type": "package",
@@ -42,6 +214,261 @@
         "restsharp.107.3.1-alpha.0.26.nupkg.sha512",
         "restsharp.nuspec",
         "restsharp.png"
+      ]
+    },
+    "SharpVectors/1.7.7": {
+      "sha512": "jMGVqc/HvxlDo5kSm24VdNd3yi+QaeY9ubSFcksDleBnGWXMoW/jCtAc6u3k1EzY7uKjwb/e//8fWiRZC80OHw==",
+      "type": "package",
+      "path": "sharpvectors/1.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/SharpVectors64.png",
+        "lib/License.txt",
+        "lib/net40/SharpVectors.Converters.Wpf.dll",
+        "lib/net40/SharpVectors.Converters.Wpf.xml",
+        "lib/net40/SharpVectors.Core.dll",
+        "lib/net40/SharpVectors.Core.xml",
+        "lib/net40/SharpVectors.Css.dll",
+        "lib/net40/SharpVectors.Css.xml",
+        "lib/net40/SharpVectors.Dom.dll",
+        "lib/net40/SharpVectors.Dom.xml",
+        "lib/net40/SharpVectors.Model.dll",
+        "lib/net40/SharpVectors.Model.xml",
+        "lib/net40/SharpVectors.Rendering.Gdi.dll",
+        "lib/net40/SharpVectors.Rendering.Gdi.xml",
+        "lib/net40/SharpVectors.Rendering.Wpf.dll",
+        "lib/net40/SharpVectors.Rendering.Wpf.xml",
+        "lib/net40/SharpVectors.Runtime.Wpf.dll",
+        "lib/net40/SharpVectors.Runtime.Wpf.xml",
+        "lib/net45/SharpVectors.Converters.Wpf.dll",
+        "lib/net45/SharpVectors.Converters.Wpf.xml",
+        "lib/net45/SharpVectors.Core.dll",
+        "lib/net45/SharpVectors.Core.xml",
+        "lib/net45/SharpVectors.Css.dll",
+        "lib/net45/SharpVectors.Css.xml",
+        "lib/net45/SharpVectors.Dom.dll",
+        "lib/net45/SharpVectors.Dom.xml",
+        "lib/net45/SharpVectors.Model.dll",
+        "lib/net45/SharpVectors.Model.xml",
+        "lib/net45/SharpVectors.Rendering.Gdi.dll",
+        "lib/net45/SharpVectors.Rendering.Gdi.xml",
+        "lib/net45/SharpVectors.Rendering.Wpf.dll",
+        "lib/net45/SharpVectors.Rendering.Wpf.xml",
+        "lib/net45/SharpVectors.Runtime.Wpf.dll",
+        "lib/net45/SharpVectors.Runtime.Wpf.xml",
+        "lib/net46/SharpVectors.Converters.Wpf.dll",
+        "lib/net46/SharpVectors.Converters.Wpf.xml",
+        "lib/net46/SharpVectors.Core.dll",
+        "lib/net46/SharpVectors.Core.xml",
+        "lib/net46/SharpVectors.Css.dll",
+        "lib/net46/SharpVectors.Css.xml",
+        "lib/net46/SharpVectors.Dom.dll",
+        "lib/net46/SharpVectors.Dom.xml",
+        "lib/net46/SharpVectors.Model.dll",
+        "lib/net46/SharpVectors.Model.xml",
+        "lib/net46/SharpVectors.Rendering.Gdi.dll",
+        "lib/net46/SharpVectors.Rendering.Gdi.xml",
+        "lib/net46/SharpVectors.Rendering.Wpf.dll",
+        "lib/net46/SharpVectors.Rendering.Wpf.xml",
+        "lib/net46/SharpVectors.Runtime.Wpf.dll",
+        "lib/net46/SharpVectors.Runtime.Wpf.xml",
+        "lib/net47/SharpVectors.Converters.Wpf.dll",
+        "lib/net47/SharpVectors.Converters.Wpf.xml",
+        "lib/net47/SharpVectors.Core.dll",
+        "lib/net47/SharpVectors.Core.xml",
+        "lib/net47/SharpVectors.Css.dll",
+        "lib/net47/SharpVectors.Css.xml",
+        "lib/net47/SharpVectors.Dom.dll",
+        "lib/net47/SharpVectors.Dom.xml",
+        "lib/net47/SharpVectors.Model.dll",
+        "lib/net47/SharpVectors.Model.xml",
+        "lib/net47/SharpVectors.Rendering.Gdi.dll",
+        "lib/net47/SharpVectors.Rendering.Gdi.xml",
+        "lib/net47/SharpVectors.Rendering.Wpf.dll",
+        "lib/net47/SharpVectors.Rendering.Wpf.xml",
+        "lib/net47/SharpVectors.Runtime.Wpf.dll",
+        "lib/net47/SharpVectors.Runtime.Wpf.xml",
+        "lib/net48/SharpVectors.Converters.Wpf.dll",
+        "lib/net48/SharpVectors.Converters.Wpf.xml",
+        "lib/net48/SharpVectors.Core.dll",
+        "lib/net48/SharpVectors.Core.xml",
+        "lib/net48/SharpVectors.Css.dll",
+        "lib/net48/SharpVectors.Css.xml",
+        "lib/net48/SharpVectors.Dom.dll",
+        "lib/net48/SharpVectors.Dom.xml",
+        "lib/net48/SharpVectors.Model.dll",
+        "lib/net48/SharpVectors.Model.xml",
+        "lib/net48/SharpVectors.Rendering.Gdi.dll",
+        "lib/net48/SharpVectors.Rendering.Gdi.xml",
+        "lib/net48/SharpVectors.Rendering.Wpf.dll",
+        "lib/net48/SharpVectors.Rendering.Wpf.xml",
+        "lib/net48/SharpVectors.Runtime.Wpf.dll",
+        "lib/net48/SharpVectors.Runtime.Wpf.xml",
+        "lib/net5.0-windows/SharpVectors.Converters.Wpf.dll",
+        "lib/net5.0-windows/SharpVectors.Converters.Wpf.xml",
+        "lib/net5.0-windows/SharpVectors.Core.dll",
+        "lib/net5.0-windows/SharpVectors.Core.xml",
+        "lib/net5.0-windows/SharpVectors.Css.dll",
+        "lib/net5.0-windows/SharpVectors.Css.xml",
+        "lib/net5.0-windows/SharpVectors.Dom.dll",
+        "lib/net5.0-windows/SharpVectors.Dom.xml",
+        "lib/net5.0-windows/SharpVectors.Model.dll",
+        "lib/net5.0-windows/SharpVectors.Model.xml",
+        "lib/net5.0-windows/SharpVectors.Rendering.Gdi.dll",
+        "lib/net5.0-windows/SharpVectors.Rendering.Gdi.xml",
+        "lib/net5.0-windows/SharpVectors.Rendering.Wpf.dll",
+        "lib/net5.0-windows/SharpVectors.Rendering.Wpf.xml",
+        "lib/net5.0-windows/SharpVectors.Runtime.Wpf.dll",
+        "lib/net5.0-windows/SharpVectors.Runtime.Wpf.xml",
+        "lib/netcoreapp3.1/SharpVectors.Converters.Wpf.dll",
+        "lib/netcoreapp3.1/SharpVectors.Converters.Wpf.xml",
+        "lib/netcoreapp3.1/SharpVectors.Core.dll",
+        "lib/netcoreapp3.1/SharpVectors.Core.xml",
+        "lib/netcoreapp3.1/SharpVectors.Css.dll",
+        "lib/netcoreapp3.1/SharpVectors.Css.xml",
+        "lib/netcoreapp3.1/SharpVectors.Dom.dll",
+        "lib/netcoreapp3.1/SharpVectors.Dom.xml",
+        "lib/netcoreapp3.1/SharpVectors.Model.dll",
+        "lib/netcoreapp3.1/SharpVectors.Model.xml",
+        "lib/netcoreapp3.1/SharpVectors.Rendering.Gdi.dll",
+        "lib/netcoreapp3.1/SharpVectors.Rendering.Gdi.xml",
+        "lib/netcoreapp3.1/SharpVectors.Rendering.Wpf.dll",
+        "lib/netcoreapp3.1/SharpVectors.Rendering.Wpf.xml",
+        "lib/netcoreapp3.1/SharpVectors.Runtime.Wpf.dll",
+        "lib/netcoreapp3.1/SharpVectors.Runtime.Wpf.xml",
+        "sharpvectors.1.7.7.nupkg.sha512",
+        "sharpvectors.nuspec"
+      ]
+    },
+    "System.Security.AccessControl/5.0.0": {
+      "sha512": "dagJ1mHZO3Ani8GH0PHpPEe/oYO+rVdbQjvjJkBRNQkX4t0r1iaeGn8+/ybkSLEan3/slM0t59SVdHzuHf2jmw==",
+      "type": "package",
+      "path": "system.security.accesscontrol/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.xml",
+        "lib/netstandard1.3/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/System.Security.AccessControl.dll",
+        "ref/netstandard1.3/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/de/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/es/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/fr/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/it/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ja/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ko/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ru/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
+        "ref/netstandard2.0/System.Security.AccessControl.dll",
+        "ref/netstandard2.0/System.Security.AccessControl.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/win/lib/net46/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.xml",
+        "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.accesscontrol.5.0.0.nupkg.sha512",
+        "system.security.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Principal.Windows/5.0.0": {
+      "sha512": "t0MGLukB5WAVU9bO3MGzvlGnyJPgUlcwerXn1kzBRjwLKixT96XV0Uza41W49gVd8zEMFu9vQEFlv0IOrytICA==",
+      "type": "package",
+      "path": "system.security.principal.windows/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.xml",
+        "lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.xml",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.dll",
+        "ref/netcoreapp3.0/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/System.Security.Principal.Windows.dll",
+        "ref/netstandard1.3/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/es/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/fr/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/it/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ja/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ko/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ru/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.Principal.Windows.xml",
+        "ref/netstandard2.0/System.Security.Principal.Windows.dll",
+        "ref/netstandard2.0/System.Security.Principal.Windows.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.xml",
+        "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.principal.windows.5.0.0.nupkg.sha512",
+        "system.security.principal.windows.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Speech/6.0.0": {
+      "sha512": "GQovERMrNP0Vbtgk8LzH4PlFS6lqHgsL9WkUmv8Kkxa0m0vNakitytpHZlfJ9WR7n9WKLXh68nn2kyL9mflnLg==",
+      "type": "package",
+      "path": "system.speech/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Speech.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/_._",
+        "lib/net6.0/System.Speech.dll",
+        "lib/net6.0/System.Speech.xml",
+        "lib/netcoreapp3.1/System.Speech.dll",
+        "lib/netcoreapp3.1/System.Speech.xml",
+        "lib/netstandard2.0/System.Speech.dll",
+        "lib/netstandard2.0/System.Speech.xml",
+        "runtimes/win/lib/net6.0/System.Speech.dll",
+        "runtimes/win/lib/net6.0/System.Speech.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Speech.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Speech.xml",
+        "system.speech.6.0.0.nupkg.sha512",
+        "system.speech.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Text.Json/5.0.0": {
@@ -69,7 +496,9 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "RestSharp >= 107.3.1-alpha.0.26"
+      "RestSharp >= 107.3.1-alpha.0.26",
+      "SharpVectors >= 1.7.7",
+      "System.Speech >= 6.0.0"
     ]
   },
   "packageFolders": {
@@ -114,6 +543,14 @@
           "RestSharp": {
             "target": "Package",
             "version": "[107.3.1-alpha.0.26, )"
+          },
+          "SharpVectors": {
+            "target": "Package",
+            "version": "[1.7.7, )"
+          },
+          "System.Speech": {
+            "target": "Package",
+            "version": "[6.0.0, )"
           }
         },
         "imports": [

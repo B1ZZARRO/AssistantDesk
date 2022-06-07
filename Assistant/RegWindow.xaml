@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:Assistant"
         mc:Ignorable="d"
-        Title="RegWindow" Height="450" Width="800" Closed="RegWindow_OnClosed">
+        Title="RegWindow" Height="450" Width="800" Closed="RegWindow_OnClosed" Background="#FF6200EE">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
@@ -24,12 +24,12 @@
             <ColumnDefinition Width="250"/>
         </Grid.ColumnDefinitions>
         
-        <Label Grid.Row="1" Grid.Column="1" Content="Как к вам обращаться?" FontSize="24" HorizontalAlignment="Center"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Как к вам обращаться?" FontSize="24" HorizontalAlignment="Center" Foreground="White"/>
         
-        <TextBox Grid.Row="3" Grid.Column="1" Margin="50 0 50 0" Name="tb_name"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="50 0 50 0" Name="tb_name"/>
         
-        <Button Grid.Row="5" Grid.Column="1" Content="Войти" Name="btn_reg" Margin="80 0 80 0" Click="Btn_reg_OnClick"></Button>
+        <Button Grid.Row="5" Grid.Column="1" Content="Войти" Name="btn_reg" Margin="80 0 80 0" Click="Btn_reg_OnClick"/>
         
-        <Label Grid.Row="7" Grid.Column="1" Name="lbl_error"></Label>
+        <Label Grid.Row="7" Grid.Column="1" Name="lbl_error"/>
     </Grid>
 </Window>

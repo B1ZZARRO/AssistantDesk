@@ -8,12 +8,14 @@ namespace Assistant
     public partial class RegWindow : Window
     {
         private RestClient apiClientUser = ServiceBuilderUser.GetInstance();
+        private readonly Window _parentRegWindow;
         private string sLogin;
         private string sPassword;
         
-        public RegWindow(string login, string password)
+        public RegWindow(string login, string password, Window regParent)
         {
             InitializeComponent();
+            _parentRegWindow = regParent;
             sLogin = login;
             sPassword = password;
         }

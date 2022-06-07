@@ -26,3 +26,13 @@ C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\obj\Debug\net5.0-windo
 C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\obj\Debug\net5.0-windows\AuthWindow.baml
 C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\obj\Debug\net5.0-windows\RegWindow.g.cs
 C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\obj\Debug\net5.0-windows\RegWindow.baml
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Debug\net5.0-windows\SharpVectors.Converters.Wpf.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Debug\net5.0-windows\SharpVectors.Core.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Debug\net5.0-windows\SharpVectors.Css.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Debug\net5.0-windows\SharpVectors.Dom.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Debug\net5.0-windows\SharpVectors.Model.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Debug\net5.0-windows\SharpVectors.Rendering.Gdi.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Debug\net5.0-windows\SharpVectors.Rendering.Wpf.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Debug\net5.0-windows\SharpVectors.Runtime.Wpf.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Debug\net5.0-windows\System.Speech.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Speech.dll

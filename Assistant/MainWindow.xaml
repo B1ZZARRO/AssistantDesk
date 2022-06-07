@@ -4,30 +4,32 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assistant"
+        xmlns:converters="http://sharpvectors.codeplex.com/svgc/"
+        xmlns:renderers="clr-namespace:SharpVectors.Renderers;assembly=SharpVectors.Rendering.Gdi"
         mc:Ignorable="d"
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
-        Title="Ассистент" Height="1080" Width="1920" WindowState="Maximized" Closed="MainWindow_OnClosed">
+        Title="Ассистент" Height="1080" Width="1920" WindowState="Maximized" Closed="MainWindow_OnClosed" Background="#FF6200EE">
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition />
             <RowDefinition Height="40"/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="600"/>
+            <ColumnDefinition Width="500"/>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="5"/>
         </Grid.ColumnDefinitions>
         
-        <Button Grid.Row="1" Grid.Column="1" Height="40" Width="40" Name="btn_mic">
+        <Button Grid.Row="1" Grid.Column="1" Height="40" Width="40" Name="btn_mic"07>
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
-                        <Ellipse StrokeThickness="2" Stroke="MediumPurple" Fill="MediumPurple"/>
-                        <Image Height="30" Width="30" Source="icons/send_black_24dp.svg" />
+                        <Ellipse StrokeThickness="2" Stroke="#FF6200EE" Fill="#FF6200EE"/>
+                        <Image Height="30" Width="30" Source="icons/baseline_mic_white_24dp.png" />
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
@@ -37,8 +39,30 @@
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
-                        <Ellipse StrokeThickness="2" Stroke="MediumPurple" Fill="MediumPurple"/>
-                        <Image Height="30" Width="30" Source="icons/send_black_24dp.svg" />
+                        <Ellipse StrokeThickness="2" Stroke="#FF6200EE" Fill="#FF6200EE"/>
+                        <Image Height="30" Width="30" Source="icons/baseline_send_white_24dp.png" />
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        
+        <Button Grid.Row="0" Grid.Column="3" Height="40" Width="40" Name="btn_mus" Click="Btn_mus_OnClick" VerticalAlignment="Bottom" Margin="0 0 0 30">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse StrokeThickness="2" Stroke="#FF6200EE" Fill="#FF6200EE"/>
+                        <Image Height="30" Width="30" Source="icons/baseline_pause_white_24dp.png" />
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        
+        <Button Grid.Row="0" Grid.Column="3" Height="40" Width="40" Name="btn_pause" Click="Btn_pause_OnClick" VerticalAlignment="Bottom" Margin="0 0 0 30">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse StrokeThickness="2" Stroke="#FF6200EE" Fill="#FF6200EE"/>
+                        <Image Height="30" Width="30" Source="icons/baseline_play_arrow_white_24dp.png" />
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
@@ -48,27 +72,31 @@
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
-                        <Ellipse StrokeThickness="2" Stroke="MediumPurple" Fill="MediumPurple"/>
-                        <Image Height="30" Width="30" Source="icons/send_black_24dp.svg" />
+                        <Ellipse StrokeThickness="2" Stroke="#FF6200EE" Fill="#FF6200EE"/>
+                        <Image Height="30" Width="30" Source="icons/baseline_exit_to_app_white_24dp.png" />
                     </Grid>
                 </ControlTemplate>
             </Button.Template>
-        </Button >
+        </Button>
         
-        <TextBox Grid.Row="1" Grid.Column="2" FontSize="26" Name="tb_request" />
+        <TextBox Grid.Row="1" Grid.Column="2" FontSize="26" Margin="0 2 0 2" Name="tb_request" />
 
-        <Label Grid.Row="0" Grid.Column="2" Content="Приветствие" FontSize="26" Margin="100 100 10 10" Name="lbl_welcome" />
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="Приветствие" FontSize="28" Name="lbl_welcome" 
+                Margin="0 100 0 0" Padding="0 0 100 0"
+                TextWrapping="WrapWithOverflow" Foreground="White"/>
 
-        <Label Grid.Row="0" Grid.Column="2" Content="Запос" FontSize="26" Margin="100 200 10 10" Name="lbl_request" />
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="Запос" FontSize="28" Name="lbl_request" 
+                HorizontalAlignment="Right" Margin="0 200 0 0" 
+                TextWrapping="WrapWithOverflow" FlowDirection="RightToLeft" Foreground="White"/>
 
-        <Label Grid.Row="0" Grid.Column="2" Content="Ответ" FontSize="26" Margin="100 300 10 10" Name="lbl_response" />
-
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="Ответ" FontSize="28" Name="lbl_response" 
+                Margin="0 300 0 0" Padding="0 0 100 0"
+                TextWrapping="WrapWithOverflow" Foreground="White"/>
         
-        
-        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" 
+        <ListBox Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
                  HorizontalAlignment="Left"  
-                 Name="listViewProfMinsk" Width="600"
-                 FontSize="24"
+                 Name="list_history" Width="500"
+                 FontSize="22"
                  ItemsSource="{Binding Histories}"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemTemplate>
