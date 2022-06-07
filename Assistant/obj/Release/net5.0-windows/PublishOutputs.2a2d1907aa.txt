@@ -1,0 +1,16 @@
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\Assistant.exe
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\Assistant.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\Assistant.deps.json
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\Assistant.runtimeconfig.json
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\Assistant.pdb
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\RestSharp.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\SharpVectors.Converters.Wpf.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\SharpVectors.Core.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\SharpVectors.Css.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\SharpVectors.Dom.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\SharpVectors.Model.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\SharpVectors.Rendering.Gdi.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\SharpVectors.Rendering.Wpf.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\SharpVectors.Runtime.Wpf.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\System.Speech.dll
+C:\Users\Дмитрий\RiderProjects\Assistant\Assistant\bin\Release\net5.0-windows\publish\runtimes\win\lib\netcoreapp3.1\System.Speech.dll
