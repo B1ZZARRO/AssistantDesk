@@ -24,7 +24,7 @@
             <ColumnDefinition Width="5"/>
         </Grid.ColumnDefinitions>
         
-        <Button Grid.Row="1" Grid.Column="1" Height="40" Width="40" Name="btn_mic"07>
+        <Button Grid.Row="1" Grid.Column="1" Height="40" Width="40" Name="btn_mic">
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
